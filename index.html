@@ -163,6 +163,12 @@
 <script>
   const menuBtn = document.querySelector('#hamburger');
   const menu = document.querySelector('.menu');
+  const body = document.body;
+  const successDialog = document.querySelector('.success');
+
+  if (window.innerWidth < 1300) {
+    successDialog.style.height = `${body.offsetHeight}px`;
+  }
 
   menuBtn.addEventListener('click', () => {
     if (menu.style.display === 'block') {

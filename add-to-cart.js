@@ -39,7 +39,6 @@ plus.addEventListener('click', () => {
     quantity = parseInt(quantityPara.textContent);
     quantity++;
     quantityPara.textContent = quantity;
-    console.log(quantity)
 })
 
 
@@ -47,7 +46,7 @@ add.addEventListener('click', () => {
     
     if (quantity > 0) {
 
-        const filledCart = document.querySelector('#filled-cart');
+    const filledCart = document.querySelector('#filled-cart');
     const price = document.querySelector('#sale-price');
     const productPic = document.querySelector('#productPic');
     const productName = document.querySelector('#product');
