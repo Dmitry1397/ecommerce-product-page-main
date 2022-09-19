@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <script src="gallery.js" defer></script>
+  <script src="add-to-cart.js" defer></script>
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+
+  <header>
+    <div class="top-left">
+
+      <button id="hamburger" class="open">
+
+      </button>
+
+      <div class="logo">
+        <img src="images/logo.svg" alt="">
+      </div>
+  
+      <nav class="menu">
+        <ul id="menu">
+          <li class="menu-item"><a class="menu-link" href="">Collections <span></span></a></li>
+          <li class="menu-item"><a class="menu-link" href="">Men <span></span></a></li>
+          <li class="menu-item"><a class="menu-link" href="">Women <span></span></a></li>
+          <li class="menu-item"><a class="menu-link" href="">About <span></span></a></li>
+          <li class="menu-item"><a class="menu-link" href="">Contact <span></span></a></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="top-right">
+      <div class="cart-button">
+        <button id="cart">
+          <span id="total-cart">0</span>
+        </button>
+        <div class="cart">
+          <div class="cart-header">
+            <p>Cart</p>
+          </div>
+      
+          <div class="content"> 
+            <p id="empty">Your car is empty</p>
+            <div id="filled-cart">
+              <button id="checkout">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile">
+        <button id="profile">
+
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+  
+    <div class="gallery" >
+      <div id="main-gallery">
+        <div class="main-photo">
+          <img id="main-pic" src="images/image-product-1.jpg" alt="">
+        </div>
+        <div class="thumbnail">
+          <div class="thumbnail-img active">
+            <img src="images/image-product-1-thumbnail.jpg" alt="">
+          </div>
+  
+          <div class="thumbnail-img">
+            <img src="images/image-product-2-thumbnail.jpg" alt="">
+          </div>
+          
+          <div class="thumbnail-img">
+            <img class="thumbnail-img" src="images/image-product-3-thumbnail.jpg" alt="">
+          </div>
+          
+          <div class="thumbnail-img">
+            <img class="thumbnail-img" src="images/image-product-4-thumbnail.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="full-size-gallery">
+        
+        <div class="main-photo">
+          <button id="close-gallery"></button>
+          <button id="arrow-left"></button>
+          <img id="main-pic" src="images/image-product-1.jpg" alt="">
+          <button id="arrow-right"></button>
+        </div>
+        <div class="thumbnail">
+          <div class="thumbnail-img active">
+            <img id="productPic" src="images/image-product-1-thumbnail.jpg" alt="">
+          </div>
+  
+          <div class="thumbnail-img">
+            <img src="images/image-product-2-thumbnail.jpg" alt="">
+          </div>
+          
+          <div class="thumbnail-img">
+            <img src="images/image-product-3-thumbnail.jpg" alt="">
+          </div>
+          
+          <div class="thumbnail-img">
+            <img src="images/image-product-4-thumbnail.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="description">
+      <h3 id="manufacturer">
+        Sneaker Company
+      </h3>
+      <h2 id="product">
+        Fall Limited Edition Sneakers
+      </h2>
+      <p id="about">
+        These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p>
+
+      <div class="price">
+        <p id="sale-price">$125.00 <span id="discount">50%</span></p>
+        <p id="old-price">$250.00</p>
+      </div>
+
+      <div class="to-buy">
+        <div class="quantity">
+          <button id="minus"></button>
+          <p id="quantity">0</p>
+          <button id="plus"></button>
+        </div>
+    
+        <div class="to-cart">
+          <button id="add">
+            <span></span>Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+  const menuBtn = document.querySelector('#hamburger');
+  const menu = document.querySelector('.menu');
+
+  menuBtn.addEventListener('click', () => {
+    if (menu.style.display === 'block') {
+      menu.style.display = 'none';
+      menuBtn.setAttribute('class', 'open');
+    } else {
+      menu.style.display = 'block';
+      menuBtn.setAttribute('class', 'close');
+    }
+  })
+</script>
+</body>
+</html>
