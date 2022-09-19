@@ -10,6 +10,9 @@ const cart = document.querySelector('.cart');
 const totalCart = document.querySelector('#total-cart');
 const addToCart = document.querySelector('#add');
 
+const success = document.querySelector('.success');
+const okBtn = document.querySelector('#ok');
+
 
 let quantity;
 
@@ -100,10 +103,13 @@ add.addEventListener('click', () => {
     empty.style.display = 'none';
     filledCart.style.display = 'block';
 
-        totalCart.textContent = quantity;
+    totalCart.textContent = quantity;
+
+    success.style.display = 'flex';
     } else {
         alert('Nothing add to cart!');
     }
 
-
 })
+
+okBtn.addEventListener('click', () => success.style.display = 'none');

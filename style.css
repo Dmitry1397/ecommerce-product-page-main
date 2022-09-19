@@ -481,6 +481,42 @@ button:hover {
     cursor: pointer;
 }
 
+.success {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    background: hsla(0, 0%, 0%, 0.6);
+    z-index: 9999;
+}
+
+.success p {
+    width: 300px;
+    background: hsl(0, 0%, 100%);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 50px;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+#ok {
+    display: block;
+    background: hsl(26, 100%, 55%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+}
 
 @media screen and (max-width: 330px) {
 
@@ -642,7 +678,7 @@ button:hover {
         box-sizing: border-box;
         left: 50%;
         transform: translateX(-50%);
-        top: 12vh;
+        top: 13vh;
         width: 90vw;
     }
 
@@ -687,6 +723,7 @@ button:hover {
     #arrow-right {
         right: 20px;
     }
+
 }
 
 @media screen and (min-width: 331px) and (max-width: 700px) {
@@ -732,6 +769,10 @@ button:hover {
 
     .menu-link span {
         display: none;
+    }
+
+    .profile {
+        margin-left: 20px;
     }
 
     #hamburger {
@@ -840,7 +881,7 @@ button:hover {
         box-sizing: border-box;
         left: 50%;
         transform: translateX(-50%);
-        top: 12vh;
+        top: 13vh;
         width: 90vw;
     }
 
